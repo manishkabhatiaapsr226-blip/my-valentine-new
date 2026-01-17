@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For My Favorite Person</title>
+    <style>
+        body {
+            background-color: #ffcad4; /* Soft pink */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 320px;
+        }
+        
+        /* The Polaroid Frame Style */
+        .photo-frame {
+            background: white;
+            padding: 10px 10px 30px 10px; /* Thicker bottom like a polaroid */
+            border: 1px solid #eee;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transform: rotate(-3deg); /* Cute slight tilt */
+            margin: 20px auto;
+            max-width: 200px;
+        }
+        
+        .photo-frame img {
+            width: 100%;
+            height: auto;
+            border-radius: 2px;
+            display: block;
+        }
+
+        h1 { color: #d63384; margin-top: 10px; }
+        .heart {
+            font-size: 50px;
+            color: #e63946;
+            animation: beat 1s infinite;
+        }
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        button {
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        #message { display: none; margin-top: 20px; line-height: 1.5; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="heart">❤️</div>
+        <h1>Hi [His Name]!</h1>
+        
+        <div class="photo-frame">
+            <img src="us.jpg" alt="Our Cute Photo">
+        </div>
+
+        <p>I made something small for you.</p>
+        <button onclick="revealMessage()">Click to Open</button>
+        
+        <div id="message">
+            <p>You are my favorite person in the whole world! Happy Valentine's Day! 🌹</p>
+            <p><strong>Let's go get tacos later?</strong></p>
+        </div>
+    </div>
+
+    <script>
+        function revealMessage() {
+            document.getElementById('message').style.display = 'block';
+            confettiEffect();
+        }
+
+        function confettiEffect() {
+            alert("Yay! I love you!");
+        }
+    </script>
+</body>
+</html>
